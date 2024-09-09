@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+body {
+  font-family: "Poppins" !important;
+  background-color: #f6f8fc;
+}
 img {
   display: inline-block;
   max-width: 100%;
