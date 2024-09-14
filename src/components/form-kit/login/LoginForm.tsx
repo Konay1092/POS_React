@@ -98,7 +98,7 @@ function LoginForm({ mobile }: LoginPropsT) {
         />
         <FormDescription
           className="text-blue-500 cursor-pointer"
-          onClick={() => navigate("/reset-password")}
+          onClick={() => navigate("/forgotpassword")}
         >
           Forgot your Password?
         </FormDescription>

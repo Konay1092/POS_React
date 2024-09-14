@@ -13,7 +13,7 @@ const DesktopLoginComp = () => {
         <div className="text-center">
           <h1 className="text-black text-2xl font-bold">Welcome Back</h1>
           <p className="my-4">
-            Please eneter your account details to sign in your account
+            Please enter your account details to sign in your account
           </p>
         </div>
         <div className="h-full">

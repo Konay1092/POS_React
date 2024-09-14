@@ -1,4 +1,5 @@
 import Logo from "/assets/logo/logo.jpg";
+import Warejeans from "/assets/resetpassword.png";
 
 export const AuthLogo = ({
   width,

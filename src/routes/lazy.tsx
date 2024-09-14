@@ -7,8 +7,11 @@ export const LazyChangePassword = lazy(
   () => import("@/pages/auth/ChangePassword")
 );
 export const LazyOtpValidate = lazy(() => import("@/pages/auth/OtpValidation"));
-export const LazyResetPassword = lazy(
-  () => import("@/pages/auth/ResetPassword")
+export const LazyForgotPassword = lazy(
+  () => import("@/pages/auth/ForgotPassword")
+);
+export const LazyResetPasswordSuccess = lazy(
+  () => import("@/pages/auth/ResetPasswordSuccess")
 );
 export const LazyWelcome = lazy(() => import("@/pages/welcome"));
 export const LazyProducts = lazy(() => import("@/pages/products"));
