@@ -5,5 +5,11 @@ interface Props {
 }
 
 export const AuthBg = ({ children }: Props) => {
-  return <div className="h-screen grid place-items-center">{children}</div>;
+  return (
+    <div
+      className={`h-screen grid place-items-center lg:bg-[url('/assets/authBg.jpg')] bg-cover bg-no-repeat`}
+    >
+      {children}
+    </div>
+  );
 };

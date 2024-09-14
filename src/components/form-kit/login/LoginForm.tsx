@@ -59,49 +59,55 @@ function LoginForm({ mobile }: LoginPropsT) {
         onSubmit={form.handleSubmit(onSubmit)}
         className={mobile ? mobileClassName : desktopClassName}
       >
-        <FormField
-          control={form.control}
-          name="email"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <Input className="bg-gray-100" placeholder="Email" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="password"
-          render={({ field }) => (
-            <FormItem>
-              <FormControl>
-                <div className="relative">
+        <div className="flex flex-col gap-4">
+          <FormField
+            control={form.control}
+            name="email"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
                   <Input
                     className="bg-gray-100"
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Password"
+                    placeholder="Email"
                     {...field}
                   />
-                  <span
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
-                    onClick={() => setShowPassword(!showPassword)}
-                  >
-                    {openCloseEyesPassword(showPassword)}
-                  </span>
-                </div>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormDescription
-          className="text-blue-500 cursor-pointer"
-          onClick={() => navigate("/forgotpassword")}
-        >
-          Forgot your Password?
-        </FormDescription>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="password"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <div className="relative">
+                    <Input
+                      className="bg-gray-100"
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Password"
+                      {...field}
+                    />
+                    <span
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {openCloseEyesPassword(showPassword)}
+                    </span>
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormDescription
+            className="text-blue-500 cursor-pointer"
+            onClick={() => navigate("/reset-password")}
+          >
+            Forgot your Password?
+          </FormDescription>
+        </div>
         <div className="text-center">
           <Button type="submit" variant="welcome" className="w-full">
             Sign In

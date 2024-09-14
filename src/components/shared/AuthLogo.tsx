@@ -22,7 +22,7 @@ export const AuthLogo = ({
         />
       </div>
       {!mobile && (
-        <h4 className="text-center font-bold text-lg lg:text-2xl">
+        <h4 className="text-center font-bold text-2xl lg:text-2xl">
           Nadi Yoon Htike
         </h4>
       )}

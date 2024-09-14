@@ -5,18 +5,19 @@ import LoginForm from "@/components/form-kit/login";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import useResponsive from "@/utils/useResponsive";
+import { ArrowLeft } from "lucide-react";
 
 const DesktopLoginComp = () => {
   return (
-    <Card className="shadow-lg rounded-lg  border border-gray-100 h-[25rem]">
-      <CardContent className=" p-4 h-full">
-        <div className="text-center">
+    <Card className="shadow-lg rounded-lg  border border-gray-100 h-[80vh] min-h-[80vh] max-h-[80vh]">
+      <CardContent className="p-4 h-full">
+        <div className="text-center ">
           <h1 className="text-black text-2xl font-bold">Welcome Back</h1>
           <p className="my-4">
             Please enter your account details to sign in your account
           </p>
         </div>
-        <div className="h-full">
+        <div className="h-full pt-8">
           <LoginForm />
         </div>
       </CardContent>
@@ -32,7 +33,7 @@ const MobileLoginComp = () => {
         className="absolute top-5 left-5 cursor-pointer"
         onClick={() => navigate(-1)}
       >
-        Back
+        <ArrowLeft />
       </p>
 
       <div className="flex flex-col items-center justify-center h-full">

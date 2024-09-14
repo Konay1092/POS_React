@@ -8,6 +8,7 @@ import {
   authenticationRoutes,
 } from "@/routes/routes.config";
 import NotFound from "@/pages/notFound";
+import MainLoading from "./components/shared/MainLoading";
 
 const App = () => {
   return (
@@ -39,13 +40,11 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             {publicRoutes.map((route) => (
               <Route
-                index={route.key === "home"}
+                index={route.key === "welcome"}
                 path={route.path}
                 key={route.key}
                 element={
-                  <Suspense
-                    fallback={<p className="text-red-500">Loading...</p>}
-                  >
+                  <Suspense fallback={<MainLoading />}>
                     {route.element}
                   </Suspense>
                 }
@@ -60,7 +59,7 @@ const App = () => {
                 key={route.key}
                 path={route.path}
                 element={
-                  <Suspense fallback={<p>Loading...</p>}>
+                  <Suspense fallback={<MainLoading />}>
                     {route.element}
                   </Suspense>
                 }
